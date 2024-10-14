@@ -7,10 +7,14 @@ pipeline {
       }
     }
     stage('test') {
-      steps "mvn test"
+      steps {
+        sh "mvn test"
     }
+    }
+  }
     stage('package') {
-      steps "mvn package"
+      steps {
+        sh "mvn package"
     }
   }
 }  
